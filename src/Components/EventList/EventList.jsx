@@ -1,11 +1,14 @@
 import useAllData from "../../Hooks/useAllData";
+import EventCard from "../EventCard/EventCard";
 
 const EventList = () => {
   const [data, refetch] = useAllData("/allData");
-  console.log(data);
+  // console.log(data);
   return (
-    <div>
-      <p className="text-3xl font-semibold">This is event list Page</p>
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 px-5 mb-10  justify-center ">
+      {data.map((item) => (
+        <EventCard key={item._id} item={item} refetch={refetch}></EventCard>
+      ))}
     </div>
   );
 };

@@ -5,7 +5,7 @@ const useAllData = (input) => {
   const axiosUrl = useUrl();
   // TanStack Query
   const { refetch, data = [] } = useQuery({
-    queryKey: [`${input}`, input],
+    queryKey: [input],
     queryFn: async () => {
       const res = await axiosUrl.get(input);
       return res.data;
