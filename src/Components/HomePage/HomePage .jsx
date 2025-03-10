@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div>
+    <section>
       {/* Hero section */}
-      <section>
+      <div>
         <div
           className="hero min-h-screen"
           style={{
@@ -34,8 +34,27 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+      {/* About section */}
+      <div className="mt-10 px-10">
+        <h1 className="text-4xl font-bold text-center">
+          Welcome to our Communion
+        </h1>
+        <p className="text-lg text-center mt-4  mb-5">
+          Communion App is designed to bring people together, fostering unity
+          and connection across different faiths and communities. Whether you're
+          looking to participate in spiritual gatherings, cultural celebrations,
+          or community-driven initiatives, our platform helps you discover
+          meaningful events and engage with like-minded individuals. We believe
+          in inclusivity, understanding, and shared experiences that strengthen
+          relationships. Explore opportunities to grow, learn, and support one
+          another through a network that values diversity and togetherness. Stay
+          informed about upcoming events, connect with local groups, and make a
+          difference by participating in discussions and activities that align
+          with your interests and beliefs.
+        </p>
+      </div>
+    </section>
   );
 };
 
