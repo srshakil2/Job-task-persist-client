@@ -2,7 +2,7 @@
 
 ### Live Link:
 
-[]()
+[https://inspiring-truffle-434972.netlify.app/](https://inspiring-truffle-434972.netlify.app/)
 
 A modern web application built with powerful tools and libraries to deliver a seamless user experience.
 
