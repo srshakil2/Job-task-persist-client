@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axsiosUrl = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://job-task-persist.vercel.app",
 });
 const useUrl = () => {
   return axsiosUrl;

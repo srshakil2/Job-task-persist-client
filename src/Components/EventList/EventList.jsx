@@ -30,7 +30,7 @@ const EventList = () => {
     };
     // console.log(inputData);
     axios
-      .post("http://localhost:5000/eventData", inputData)
+      .post("https://job-task-persist.vercel.app/eventData", inputData)
       .then((res) => {
         if (res.data?.insertedId) {
           Swal.fire({
