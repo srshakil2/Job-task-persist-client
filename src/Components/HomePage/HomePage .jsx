@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 const HomePage = () => {
   return (
     <section>
+      <div>
+        <title>Home</title>
+      </div>
       {/* Hero section */}
       <div>
         <div
@@ -36,7 +39,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* About section */}
-      <div className="mt-10 px-10">
+      <div id="about" className="mt-10 px-10">
         <h1 className="text-4xl font-bold text-center">
           Welcome to our Communion
         </h1>

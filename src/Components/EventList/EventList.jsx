@@ -1,11 +1,17 @@
+import { useState } from "react";
 import useAllData from "../../Hooks/useAllData";
 import EventCard from "../EventCard/EventCard";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 const EventList = () => {
-  const [data, refetch] = useAllData("/allData");
-  // console.log(data);
+  const [search, setSearch] = useState("");
+  const [data, refetch] = useAllData(`/allData?search=${search}`);
+
+  const handelSearch = (e) => {
+    setSearch(e.target.value);
+    refetch();
+  };
 
   const handelModalData = (e) => {
     const data = e.target;
@@ -50,6 +56,19 @@ const EventList = () => {
 
   return (
     <div>
+      <div>
+        <title>Events</title>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-7 mt-10">
+        <p className="text-xl font-bold">Filter by Category</p>
+        <input
+          onChange={(e) => handelSearch(e)}
+          type="text"
+          value={search}
+          placeholder="Search"
+          className="input"
+        />
+      </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 px-5 mb-10  justify-center ">
         {data.map((item) => (
           <EventCard key={item._id} item={item} addEvent={addEvent}></EventCard>
